@@ -7,7 +7,7 @@ class UserRegistration {
 
 	Scanner sc;
 
-	// User's Last Name
+	// User's Email ID
 	public void email() {
 		sc = new Scanner(System.in);
 		System.out.print("Enter email ID :: ");
