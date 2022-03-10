@@ -7,16 +7,16 @@ class UserRegistration {
 
 	Scanner sc;
 
-	// User's Last Name
-	public void contactNumber() {
+	// rule1 = minimum 8 characters
+	public void password1() {
 		sc = new Scanner(System.in);
-		System.out.print("Enter contact number with country code :: ");
-		String ContactNumber = sc.nextLine();
-		boolean answer = Pattern.matches("^[+91]+[789]+[0-9]+{9}+$", ContactNumber);
+		System.out.print("Enter password  :: ");
+		String password = sc.nextLine();
+		boolean answer = Pattern.matches("[a-zA-Z]{8,}", password);
 		if (answer) {
 			System.out.println("Thank you");
 		} else {
-			System.out.println("enter valid contact number");
+			System.out.println("enter valid password");
 		}
 	}
 }
@@ -25,7 +25,6 @@ class UserRegistration {
 public class Regex {
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
-		// userRegistration.firstName();
-		userRegistration.contactNumber();
+		userRegistration.password1();
 	}
 }
