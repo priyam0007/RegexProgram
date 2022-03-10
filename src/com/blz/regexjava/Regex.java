@@ -7,12 +7,12 @@ class UserRegistration {
 
 	Scanner sc;
 
-	// rule1 = minimum 8 characters & atleast 1 upper case
-	public void password2() {
+	// rule1 = minimum 8 characters & at least 1 upper case at least one numeric
+	public void password3() {
 		sc = new Scanner(System.in);
 		System.out.print("Enter password  :: ");
 		String password = sc.nextLine();
-		boolean answer = Pattern.matches("^[A-Z]+[a-z]+{8,}+$", password);
+		boolean answer = Pattern.matches("^[A-Za-z0-9]+{8,}", password);
 		if (answer) {
 			System.out.println("Thank you");
 		} else {
@@ -25,6 +25,6 @@ class UserRegistration {
 public class Regex {
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
-		userRegistration.password2();
+		userRegistration.password3();
 	}
 }
