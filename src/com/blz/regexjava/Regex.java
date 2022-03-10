@@ -8,15 +8,15 @@ class UserRegistration {
 	Scanner sc;
 
 	// User's Last Name
-	public void email() {
+	public void contactNumber() {
 		sc = new Scanner(System.in);
-		System.out.print("Enter email ID :: ");
-		String Email = sc.next();
-		Boolean answer = Pattern.matches("^[a-zA-Z.]+[a-z0-9]+@[A-za-z.]+[a-z]+$", Email);
+		System.out.print("Enter contact number with country code :: ");
+		String ContactNumber = sc.nextLine();
+		boolean answer = Pattern.matches("^[+91]+[789]+[0-9]+{9}+$", ContactNumber);
 		if (answer) {
-			System.out.println("thank you");
+			System.out.println("Thank you");
 		} else {
-			System.out.println("please enter valid email ID ");
+			System.out.println("enter valid contact number");
 		}
 	}
 }
@@ -26,6 +26,6 @@ public class Regex {
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
 		// userRegistration.firstName();
-		userRegistration.email();
+		userRegistration.contactNumber();
 	}
 }
