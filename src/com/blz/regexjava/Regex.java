@@ -26,7 +26,6 @@ class UserRegistration {
 public class Regex {
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
-		// userRegistration.firstName();
 		userRegistration.lastName();
 	}
 }
