@@ -7,13 +7,12 @@ class UserRegistration {
 
 	Scanner sc;
 
-	// rule = minimum 8 characters & at least 1 upper case
-	// at least one numeric & only 1 special character
-	public void password4() {
+	// Validate the given email IDs in sheet
+	public void emailValidation() {
 		sc = new Scanner(System.in);
-		System.out.print("Enter password  :: ");
-		String password = sc.nextLine();
-		boolean answer = Pattern.matches("^[A-Za-z0-9]+{8,}+[!@#$%^&*+-|'~`,<>.?_]{1}", password);
+		System.out.print("Enter email ID :: ");
+		String Email = sc.next();
+		Boolean answer = Pattern.matches("[a-zA-Z0-9_.]*[-]*[+]*[a-zA-Z0-9]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+", Email);
 		if (answer) {
 			System.out.println("Thank you");
 		} else {
@@ -26,6 +25,6 @@ class UserRegistration {
 public class Regex {
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
-		userRegistration.password4();
+		userRegistration.emailValidation();
 	}
 }
