@@ -7,7 +7,7 @@ class UserRegistration {
 
 	Scanner sc;
 
-	// User's Last Name
+	// User's Contact Number
 	public void contactNumber() {
 		sc = new Scanner(System.in);
 		System.out.print("Enter contact number with country code :: ");
@@ -25,7 +25,6 @@ class UserRegistration {
 public class Regex {
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
-		// userRegistration.firstName();
 		userRegistration.contactNumber();
 	}
 }
