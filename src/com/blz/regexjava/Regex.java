@@ -8,17 +8,16 @@ class UserRegistration {
 	Scanner sc;
 
 	// User's Last Name
-	public void lastName() {
+	public void email() {
 		sc = new Scanner(System.in);
-		System.out.print("Enter Last Name :: ");
-		String LastName = sc.next();
-		boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", LastName);
+		System.out.print("Enter email ID :: ");
+		String Email = sc.next();
+		Boolean answer = Pattern.matches("^[a-zA-Z.]+[a-z0-9]+@[A-za-z.]+[a-z]+$", Email);
 		if (answer) {
 			System.out.println("thank you");
 		} else {
-			System.out.println("please enter valid last name ");
+			System.out.println("please enter valid email ID ");
 		}
-
 	}
 }
 
@@ -27,6 +26,6 @@ public class Regex {
 	public static void main(String[] args) {
 		UserRegistration userRegistration = new UserRegistration();
 		// userRegistration.firstName();
-		userRegistration.lastName();
+		userRegistration.email();
 	}
 }
